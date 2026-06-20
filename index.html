@@ -8,28 +8,34 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>Password Strength Checker</h1>
+<div class="container">
+    <h1>Password Strength Checker</h1>
 
+    <div class="input-group">
         <input type="password" id="password" placeholder="Enter Password">
-
-        <button onclick="checkPassword()">Check Strength</button>
-
-        <div id="result"></div>
-
-        <div class="requirements">
-            <h3>Password Requirements:</h3>
-            <ul>
-                <li>At least 8 characters</li>
-                <li>One uppercase letter</li>
-                <li>One lowercase letter</li>
-                <li>One number</li>
-                <li>One special character</li>
-            </ul>
-        </div>
+        <button id="toggleBtn" onclick="togglePassword()">Show</button>
     </div>
 
-    <script src="script.js"></script>
+    <div class="strength-bar">
+        <div id="strength-fill"></div>
+    </div>
 
+    <button onclick="checkPassword()">Check Strength</button>
+
+    <div id="result"></div>
+
+    <div class="requirements">
+        <h3>Password Requirements</h3>
+        <ul>
+            <li>Minimum 8 characters</li>
+            <li>One uppercase letter</li>
+            <li>One lowercase letter</li>
+            <li>One number</li>
+            <li>One special character</li>
+        </ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
