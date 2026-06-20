@@ -1,43 +1,77 @@
-function checkPassword() {
-    let password = document.getElementById("password").value;
-    let result = document.getElementById("result");
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
 
-    let score = 0;
+.container{
+    background:#fff;
+    padding:30px;
+    width:420px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+    text-align:center;
+}
 
-    // Check Length
-    if (password.length >= 8) {
-        score++;
-    }
+h1{
+    margin-bottom:20px;
+}
 
-    // Check Uppercase
-    if (/[A-Z]/.test(password)) {
-        score++;
-    }
+.input-group{
+    display:flex;
+    gap:10px;
+}
 
-    // Check Lowercase
-    if (/[a-z]/.test(password)) {
-        score++;
-    }
+input{
+    flex:1;
+    padding:10px;
+    font-size:16px;
+}
 
-    // Check Number
-    if (/[0-9]/.test(password)) {
-        score++;
-    }
+#toggleBtn{
+    padding:10px;
+}
 
-    // Check Special Character
-    if (/[^A-Za-z0-9]/.test(password)) {
-        score++;
-    }
+button{
+    margin-top:10px;
+    padding:10px 20px;
+    cursor:pointer;
+    border:none;
+    border-radius:5px;
+    background:#007bff;
+    color:white;
+}
 
-    // Display Result
-    if (score <= 2) {
-        result.innerHTML = "❌ Weak Password";
-        result.style.color = "red";
-    } else if (score <= 4) {
-        result.innerHTML = "⚠️ Medium Password";
-        result.style.color = "orange";
-    } else {
-        result.innerHTML = "✅ Strong Password";
-        result.style.color = "green";
-    }
+button:hover{
+    background:#0056b3;
+}
+
+.strength-bar{
+    width:100%;
+    height:12px;
+    background:#ddd;
+    border-radius:10px;
+    margin-top:15px;
+    overflow:hidden;
+}
+
+#strength-fill{
+    height:100%;
+    width:0%;
+    transition:0.4s;
+}
+
+#result{
+    margin-top:15px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.requirements{
+    text-align:left;
+    margin-top:20px;
 }
