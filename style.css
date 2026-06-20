@@ -1,69 +1,77 @@
-body {
+body{
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
 }
 
-.container {
-    background: white;
-    padding: 30px;
-    width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    text-align: center;
+.container{
+    background:#fff;
+    padding:30px;
+    width:420px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+    text-align:center;
 }
 
-h1 {
-    color: #333;
-    margin-bottom: 20px;
+h1{
+    margin-bottom:20px;
 }
 
-input {
-    width: 90%;
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.input-group{
+    display:flex;
+    gap:10px;
 }
 
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
+input{
+    flex:1;
+    padding:10px;
+    font-size:16px;
 }
 
-button:hover {
-    background-color: #0056b3;
+#toggleBtn{
+    padding:10px;
 }
 
-#result {
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: bold;
+button{
+    margin-top:10px;
+    padding:10px 20px;
+    cursor:pointer;
+    border:none;
+    border-radius:5px;
+    background:#007bff;
+    color:white;
 }
 
-.requirements {
-    text-align: left;
-    margin-top: 20px;
+button:hover{
+    background:#0056b3;
 }
 
-.requirements h3 {
-    margin-bottom: 10px;
+.strength-bar{
+    width:100%;
+    height:12px;
+    background:#ddd;
+    border-radius:10px;
+    margin-top:15px;
+    overflow:hidden;
 }
 
-.requirements ul {
-    padding-left: 20px;
+#strength-fill{
+    height:100%;
+    width:0%;
+    transition:0.4s;
 }
 
-.requirements li {
-    margin-bottom: 5px;
+#result{
+    margin-top:15px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.requirements{
+    text-align:left;
+    margin-top:20px;
 }
